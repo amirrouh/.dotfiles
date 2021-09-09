@@ -18,8 +18,6 @@ call plug#begin()
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 "Autocomplition support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" File manager"
-Plug 'preservim/nerdtree'
 " Manage Surrounding and tags "
 Plug 'tpope/vim-surround'
 " Manage multi cursor and refractoring "
@@ -38,12 +36,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'dense-analysis/ale'
 " AutoIndent Python"
 Plug 'vim-scripts/indentpython.vim'
-" Dart and Flutter PLuggins"
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
 " Drakula theme for vim
 Plug 'dracula/vim', { 'name': 'dracula' }
-
+"Gruxbox theme"
+Plug 'morhetz/gruvbox'
+set background=dark
 call plug#end()
 
 " To add python run to vim
@@ -58,7 +55,7 @@ inoremap <silent><expr> <Tab>
 nnoremap <silent> <expr> <C-o> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
 
 " Enable the color theme"
-colorscheme dracula
+colorscheme gruvbox
 
 "latex-suit changes"
 "REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
@@ -122,3 +119,6 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Colorize the bracket pairs
 hi MatchParen cterm=none ctermbg=green ctermfg=blue
+
+
+let g:ycm_path_to_python_interpreter = '/Users/amir/opt/miniconda3/envs/calcification/bin/python'
