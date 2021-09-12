@@ -13,7 +13,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     endif
     
 call plug#begin()
-
+" Install file explorer
+Plug 'preservim/nerdtree'
+" Floating terminal
+Plug 'voldikss/vim-floaterm'
+" Fancy statusbar
+Plug 'itchyny/lightline.vim'
 "This Plugin is for latex support
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 "Autocomplition support
@@ -109,6 +114,9 @@ cnoremap <C-l> <Right>
 set foldmethod=indent
 set foldlevel=99
 
+"Enable highlight for searches
+set hlsearch
+
 " Enable folding and unfolding with spacebar"
 " Enable folding with the spacebar
 nnoremap <space> za
@@ -120,5 +128,3 @@ nmap <silent> gr <Plug>(coc-references)
 " Colorize the bracket pairs
 hi MatchParen cterm=none ctermbg=green ctermfg=blue
 
-
-let g:ycm_path_to_python_interpreter = '/Users/amir/opt/miniconda3/envs/calcification/bin/python'
