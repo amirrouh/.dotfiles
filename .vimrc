@@ -45,12 +45,14 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'dracula/vim', { 'name': 'dracula' }
 "Gruxbox theme"
 Plug 'morhetz/gruvbox'
+" autocomplition
+Plug 'davidhalter/jedi-vim'
 set background=dark
 call plug#end()
 
 " To add python run to vim
-autocmd FileType python map <buffer> <F12> :w<CR>:exec '! clear; python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F12> <esc>:w<CR>:exec '! clear; python3' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <F5> :w<CR>:exec '! clear; python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '! clear; python3' shellescape(@%, 1)<CR>
 
 " To use tab to cycle in autocomplition suggestions
 inoremap <silent><expr> <Tab>
@@ -127,4 +129,5 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Colorize the bracket pairs
 hi MatchParen cterm=none ctermbg=green ctermfg=blue
+set backspace=indent,eol,start
 
