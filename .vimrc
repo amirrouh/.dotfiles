@@ -129,5 +129,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 " Colorize the bracket pairs
 hi MatchParen cterm=none ctermbg=green ctermfg=blue
+" backspace fix
 set backspace=indent,eol,start
-
+" jedi-vim configuration
+let g:jedi#popup_on_dot = 1
