@@ -22,7 +22,7 @@ Plug 'itchyny/lightline.vim'
 "This Plugin is for latex support
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 "Autocomplition support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Manage Surrounding and tags "
 Plug 'tpope/vim-surround'
 " Manage multi cursor and refractoring "
@@ -38,7 +38,7 @@ Plug 'vim-latex/vim-latex'
 " Fuzzy finder plugin "
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Linting plugin " 
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 " AutoIndent Python"
 Plug 'vim-scripts/indentpython.vim'
 " Drakula theme for vim
