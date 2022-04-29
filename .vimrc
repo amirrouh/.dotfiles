@@ -47,6 +47,8 @@ Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'morhetz/gruvbox'
 " autocomplition
 Plug 'davidhalter/jedi-vim'
+" Docker support"
+Plug 'ekalinin/Dockerfile.vim'
 set background=dark
 call plug#end()
 
