@@ -22,7 +22,7 @@ Plug 'itchyny/lightline.vim'
 "This Plugin is for latex support
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 "Autocomplition support
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Manage Surrounding and tags "
 Plug 'tpope/vim-surround'
 " Manage multi cursor and refractoring "
