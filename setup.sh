@@ -11,7 +11,7 @@ rm -rf ~/.oh-my-zsh
 
 # Update and install prerequisites
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y git python3-pip python3-venv python3-neovim python3-jedi zsh nodejs npm fzf neovim
+sudo apt install -y git python3-pip python3-venv python3-neovim python3-jedi zsh nodejs npm fzf neovim tree 
 
 # NodeJS & npm
 sudo npm install n -g
@@ -35,7 +35,7 @@ sudo apt install -y powerline fonts-powerline zsh-syntax-highlighting
 cp config_files/.zshrc ~/.zshrc
 
 # Git setup
-git config --global user.name "Amir Rouhollahi"
+git config --global user.name "Amir"
 git config --global user.email "harvard.amir@gmail.com"
 ssh-keygen -b 4096
 
