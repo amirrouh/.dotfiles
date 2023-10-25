@@ -95,3 +95,4 @@ set backspace=indent,eol,start
 
 let g:jedi#popup_on_dot = 1
 
+set mouse=a
