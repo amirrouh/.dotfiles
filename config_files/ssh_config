@@ -1,0 +1,28 @@
+Host labserver
+  HostName 5.161.207.16
+  User amir
+  Port 8437
+
+Host myserver
+  HostName 5.161.180.236
+  User amir
+
+Host MedicaPing
+  HostName 5.161.180.236
+  User amir
+
+Host MIT_Linux
+  HostName EDELMANCOMPUTEROOM-DIGITALSTORM.MIT.EDU
+  User amir
+
+Host Nezamilab_Hetzner_main
+HostName 5.161.201.238
+User amir
+
+Host Nezamilab_Hetzner_chat
+  HostName 5.161.219.31
+  User amir
+
+Host Nezamilab_Hetzner_connect
+HostName 5.161.207.16
+User amir
