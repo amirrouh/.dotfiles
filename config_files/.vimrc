@@ -2,17 +2,17 @@ set nocompatible
 set laststatus=2
 set nu
 set ai
-filetype plugin off
 set path+=**
 syntax on
 
-if empty(glob(stdpath('config') . '/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Ensure vim-plug is installed for Vim
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin(stdpath('config') . '/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
 Plug 'voldikss/vim-floaterm'
@@ -40,7 +40,7 @@ autocmd FileType python map <buffer> <F5> :w<CR>:exec '! clear; python3' shelles
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '! clear; python3' shellescape(@%, 1)<CR>
 
 " Tab for autocompletion
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " Nerdtree toggle
 nnoremap <silent> <expr> <C-o> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : "\:NERDTree<CR>"
